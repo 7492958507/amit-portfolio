@@ -255,14 +255,14 @@ export const InteractiveBoyAvatar: React.FC = () => {
         </div>
       </div>
 
-      {/* Amit Portfolio Button (Localhost Link) */}
+      {/* Amit Portfolio Button (Live Link) */}
       <div className="mt-4">
         <a
-          href="http://localhost:5173/"
+          href="https://7492958507.github.io/amit-portfolio/"
           target="_blank"
           rel="noopener noreferrer"
           className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500/15 via-emerald-500/25 to-cyan-500/15 hover:from-emerald-500/25 hover:via-emerald-500/35 hover:to-cyan-500/25 border border-emerald-500/40 hover:border-emerald-400/60 text-xs sm:text-sm font-semibold text-emerald-300 hover:text-emerald-100 transition-all duration-300 shadow-lg shadow-emerald-950/40 active:scale-95"
-          title="Open Amit Portfolio (http://localhost:5173/)"
+          title="Open Amit Portfolio Live"
         >
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>

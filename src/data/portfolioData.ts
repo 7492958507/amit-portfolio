@@ -81,8 +81,8 @@ export const INITIAL_PROJECTS: Project[] = [
       "Implemented Anti-spam honeypot method with multi-tier validation"
     ],
     tech: ["Next.js", "React", "Tailwind CSS", "Resend", "Upstash Redis", "Zod", "Cloudfair Turnstile", "Framer Motion", "Vercel"],
-    githubUrl: "https://github.com/7492958507",
-    liveUrl: "http://localhost:5173/",
+    githubUrl: "https://github.com/7492958507/amit-portfolio",
+    liveUrl: "https://7492958507.github.io/amit-portfolio/",
     image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
     featured: true
   },
