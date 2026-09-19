@@ -15,6 +15,14 @@ import {
   CheckCircle2
 } from 'lucide-react';
 
+const resolveAssetUrl = (url: string | undefined): string => {
+  if (!url) return '';
+  if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('data:')) return url;
+  const clean = url.replace(/^\.?\//, '');
+  const base = import.meta.env.BASE_URL || './';
+  return `${base.endsWith('/') ? base : base + '/'}${clean}`;
+};
+
 export const EducationCertificationsSection: React.FC = () => {
   const { certificates, education, isOwner, setIsEditModalOpen } = usePortfolio();
   const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
@@ -174,28 +182,28 @@ export const EducationCertificationsSection: React.FC = () => {
                 {cert.certificateImage && (
                   <div
                     onClick={() => setSelectedCert(cert)}
-                    className="relative w-full h-44 bg-slate-950/90 border-b border-slate-800/80 cursor-pointer overflow-hidden group/thumb"
+                    className="relative w-full h-48 bg-slate-950/90 border-b border-slate-800/80 cursor-pointer overflow-hidden group/thumb flex items-center justify-center p-2"
                     title="Click to view full certificate"
                   >
                     <img
-                      src={cert.certificateImage}
+                      src={resolveAssetUrl(cert.certificateImage)}
                       alt={cert.title}
-                      className="w-full h-full object-contain p-2 group-hover/thumb:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain group-hover/thumb:scale-105 transition-transform duration-500 rounded-lg shadow-md"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#060b19] via-transparent to-transparent opacity-60" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#060b19]/80 via-transparent to-transparent opacity-60 pointer-events-none" />
                     
                     {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-emerald-950/30 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
-                      <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/50 text-xs font-semibold text-emerald-300 shadow-xl backdrop-blur-md">
-                        <Eye className="w-3.5 h-3.5" />
+                    <div className="absolute inset-0 bg-emerald-950/40 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+                      <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/95 border border-emerald-500/60 text-xs font-semibold text-emerald-300 shadow-xl backdrop-blur-md">
+                        <Eye className="w-3.5 h-3.5 text-emerald-400" />
                         <span>Inspect Certificate</span>
                       </span>
                     </div>
 
                     {/* Issuer Logo Watermark Badge */}
                     <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5 px-2 py-1 rounded-lg bg-slate-900/90 border border-slate-800/80 backdrop-blur-md">
-                      <img src={cert.imageLogo} alt={cert.issuer} className="w-4 h-4 object-contain" />
+                      <img src={resolveAssetUrl(cert.imageLogo)} alt={cert.issuer} className="w-4 h-4 object-contain" />
                       <span className="text-[11px] font-medium text-slate-300">{cert.issuer}</span>
                     </div>
                   </div>
@@ -300,7 +308,7 @@ export const EducationCertificationsSection: React.FC = () => {
             <div className="flex items-start gap-4 mb-5 pr-10">
               <div className="w-14 h-14 rounded-xl bg-slate-900 border border-slate-800 p-2.5 flex items-center justify-center shrink-0">
                 <img
-                  src={selectedCert.imageLogo}
+                  src={resolveAssetUrl(selectedCert.imageLogo)}
                   alt={selectedCert.issuer}
                   className="max-w-full max-h-full object-contain"
                 />
@@ -321,17 +329,17 @@ export const EducationCertificationsSection: React.FC = () => {
 
             {/* Certificate High-Res Image Preview */}
             {selectedCert.certificateImage && (
-              <div className="mb-5 rounded-xl overflow-hidden bg-slate-950 border border-slate-800 relative group">
+              <div className="mb-5 rounded-xl overflow-hidden bg-slate-950 border border-slate-800 relative group flex items-center justify-center p-2">
                 <img
-                  src={selectedCert.certificateImage}
+                  src={resolveAssetUrl(selectedCert.certificateImage)}
                   alt={selectedCert.title}
-                  className="w-full max-h-96 object-contain mx-auto"
+                  className="w-full max-h-[480px] object-contain mx-auto rounded-lg"
                 />
                 <a
-                  href={selectedCert.certificateImage}
+                  href={resolveAssetUrl(selectedCert.certificateImage)}
                   target="_blank"
                   rel="noreferrer"
-                  className="absolute bottom-3 right-3 px-3 py-1.5 rounded-lg bg-black/80 hover:bg-black border border-white/20 text-xs font-semibold text-white flex items-center gap-1.5 backdrop-blur-md transition-all shadow-lg"
+                  className="absolute bottom-4 right-4 px-3 py-1.5 rounded-lg bg-black/80 hover:bg-black border border-white/20 text-xs font-semibold text-white flex items-center gap-1.5 backdrop-blur-md transition-all shadow-lg"
                 >
                   <ExternalLink className="w-3.5 h-3.5 text-emerald-400" />
                   <span>Open Full Image</span>

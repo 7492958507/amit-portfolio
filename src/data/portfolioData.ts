@@ -218,7 +218,7 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     verificationUrl: "https://www.hackerrank.com/certificates/iframe/a7ccdcc65916",
     skills: ["Python", "Data Structures", "Algorithms", "Problem Solving", "Object-Oriented Programming"],
     imageLogo: "https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png",
-    certificateImage: "/certificates/hackerrank-python.png",
+    certificateImage: "./certificates/hackerrank-python.png",
     description: "Passed the official HackerRank skill assessment verifying core Python competence, algorithmic complexity, data structures, and clean coding practices."
   },
   {
@@ -230,7 +230,7 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     verificationUrl: "https://cutshort.io/certificate/103148",
     skills: ["HTML5", "CSS3", "Advanced UI Design", "Responsive Layouts", "Web Standards", "Modern CSS Grid/Flexbox"],
     imageLogo: "https://cutshort.io/favicon.ico",
-    certificateImage: "/certificates/cutshort-html-css.png",
+    certificateImage: "./certificates/cutshort-html-css.png",
     description: "Certified with Advanced proficiency level in HTML5 and CSS3 through Cutshort's comprehensive technical benchmark assessment."
   },
   {
@@ -242,7 +242,7 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     verificationUrl: "https://unstop.com/certificate-preview/dbfac4f5-4506-4d4f-9c5a-ee874c3774c1",
     skills: ["Case Study Analysis", "Problem Solving", "Analytical Thinking", "System Strategy", "Team Collaboration"],
     imageLogo: "https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/branding-guidelines/logos/blue/icon.svg",
-    certificateImage: "/certificates/unstop-mastercase.png",
+    certificateImage: "./certificates/unstop-mastercase.png",
     description: "Certificate of Participation representing MCKV Institute of Engineering (Team kumaramit05201) in Master Case Competitions organized by Unstop."
   },
   {
@@ -254,7 +254,7 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     verificationUrl: "https://unstop.com/certificate-preview/5596af89-6ff2-4359-b3e3-76057ec4bb52",
     skills: ["Competitive Programming", "Data Structures", "Algorithms", "Optimization", "Speed Coding"],
     imageLogo: "https://upload.wikimedia.org/wikipedia/commons/2/29/Xiaomi_logo.svg",
-    certificateImage: "/certificates/unstop-xiaomi-ode2code.png",
+    certificateImage: "./certificates/unstop-xiaomi-ode2code.png",
     description: "National engineering coding competition by Xiaomi India assessing high-performance algorithmic problem solving under timed tournament constraints."
   },
   {
@@ -266,7 +266,7 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     verificationUrl: "https://unstop.com/certificate-preview/aec68274-3b38-47b6-a297-3c827919b88d",
     skills: ["Modern Web Architecture", "Contentstack Headless CMS", "Cloud Workflows", "Full Stack Development"],
     imageLogo: "https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/branding-guidelines/logos/blue/icon.svg",
-    certificateImage: "/certificates/unstop-techsurf.png",
+    certificateImage: "./certificates/unstop-techsurf.png",
     description: "Certificate of Participation in Techsurf 2023 national technology championship organized by enterprise CMS leader Contentstack on Unstop."
   },
   {
@@ -278,7 +278,7 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     verificationUrl: "https://unstop.com/certificate-preview/a5a52c0e-0afc-4771-b487-ff12278b73a1",
     skills: ["E-Commerce Architecture", "Software Engineering", "System Design", "Distributed Systems", "Algorithms"],
     imageLogo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
-    certificateImage: "/certificates/unstop-flipkart-grid.png",
+    certificateImage: "./certificates/unstop-flipkart-grid.png",
     description: "Represented MCKV Institute of Engineering as Team BIHAR TIGER in Level 1.1: E-Commerce & Tech Quiz of Flipkart GRiD 5.0 - Software Development Track organised by Flipkart."
   },
   {
@@ -290,7 +290,7 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     verificationUrl: "https://udemy-certificate.s3.amazonaws.com/image/UC-d06fbf27-d95a-4225-b8ef-853139dd6102.jpg",
     skills: ["React.js", "React Hooks", "Redux", "Component Lifecycle", "State Management", "SPA Architecture"],
     imageLogo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-    certificateImage: "/certificates/udemy-d06fbf27.jpg",
+    certificateImage: "./certificates/udemy-d06fbf27.jpg",
     description: "10.5 hours comprehensive training covering modern React development, hooks, state architecture, component styling, and hands-on production web applications."
   },
   {
@@ -302,7 +302,7 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     verificationUrl: "https://udemy-certificate.s3.amazonaws.com/image/UC-9754acad-2c12-45fd-9aef-98f642d5f1ec.jpg",
     skills: ["Python", "Flask Framework", "RESTful APIs", "Routing & Templates", "Backend Architecture", "SQLite"],
     imageLogo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-    certificateImage: "/certificates/udemy-9754acad.jpg",
+    certificateImage: "./certificates/udemy-9754acad.jpg",
     description: "12.5 hours in-depth course on Python backend development using the Flask micro-framework, database integration, REST APIs, and authentication."
   },
   {
@@ -314,7 +314,7 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     verificationUrl: "https://udemy-certificate.s3.amazonaws.com/image/UC-b61514ee-c726-4e68-b5c5-dc7ee00128e0.jpg",
     skills: ["Sentiment Analysis", "NLP", "Machine Learning", "Python", "Spam Detection", "Text Preprocessing"],
     imageLogo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
-    certificateImage: "/certificates/udemy-b61514ee.jpg",
+    certificateImage: "./certificates/udemy-b61514ee.jpg",
     description: "Hands-on machine learning implementation analyzing customer review sentiment, text feature extraction (TF-IDF), and spam classification models."
   },
   {
@@ -326,7 +326,7 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     verificationUrl: "https://udemy-certificate.s3.amazonaws.com/image/UC-9647575b-f49d-44ea-97b8-2cff1710a240.jpg",
     skills: ["Generative AI", "ChatGPT", "Prompt Engineering", "Circuit Design", "Electronic Simulation", "Hardware Modeling"],
     imageLogo: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Udemy_logo.svg",
-    certificateImage: "/certificates/udemy-9647575b.jpg",
+    certificateImage: "./certificates/udemy-9647575b.jpg",
     description: "Specialized credential on leveraging generative AI and prompt workflows to model schematic circuit designs, component selection, and simulation."
   },
   {
@@ -350,7 +350,7 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     verificationUrl: "https://internshala.com/student/certificate/335472265/d1e7wepxygx",
     skills: ["Artificial Intelligence (AI)", "Machine Learning", "Python", "Data Analysis", "Model Evaluation"],
     imageLogo: "https://internshala.com/favicon.ico",
-    certificateImage: "/certificates/internshala-ai-selection.png",
+    certificateImage: "./certificates/internshala-ai-selection.png",
     description: "Certificate of Selection awarded to Amit Kumar (MCKV Institute of Engineering) for securing an Artificial Intelligence (AI) internship at She Can Foundation through Internshala."
   },
   {
@@ -362,7 +362,7 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     verificationUrl: "https://www.hcltech.com/",
     skills: ["RF & Antenna Technologies", "Wireless Communication", "Telecommunications", "Hardware & Embedded Systems"],
     imageLogo: "https://upload.wikimedia.org/wikipedia/commons/9/95/HCL_Technologies_logo.svg",
-    certificateImage: "/certificates/hcl-rf-antenna.png",
+    certificateImage: "./certificates/hcl-rf-antenna.png",
     description: "Industrial Guest Lecture & training by Sri. Debojyoti Choudhuri (DGM, Head-Wireless, RF & Antenna COE, HCL Technologies Ltd.) appreciating active technical participation."
   },
   {
@@ -374,7 +374,7 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     verificationUrl: "https://pvgcoenashik.org/",
     skills: ["Data Structures", "C Programming", "Algorithms", "Memory Management", "Problem Solving"],
     imageLogo: "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg",
-    certificateImage: "/certificates/pvg-dsa-c.png",
+    certificateImage: "./certificates/pvg-dsa-c.png",
     description: "Completed technical certification quiz on Data Structure using C organized by the Department of Electronics and Telecommunication Engineering with verified valid score."
   }
 ];
