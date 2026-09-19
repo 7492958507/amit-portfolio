@@ -18,9 +18,19 @@ import {
 const resolveAssetUrl = (url: string | undefined): string => {
   if (!url) return '';
   if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('data:')) return url;
-  const clean = url.replace(/^\.?\//, '');
-  const base = import.meta.env.BASE_URL || './';
-  return `${base.endsWith('/') ? base : base + '/'}${clean}`;
+  const clean = url.replace(/^(\.\/|\/)/, '');
+
+  if (typeof window !== 'undefined') {
+    if (window.location.hostname.includes('github.io') || window.location.pathname.startsWith('/amit-portfolio')) {
+      return `/amit-portfolio/${clean}`;
+    }
+  }
+
+  const base = import.meta.env.BASE_URL || '/';
+  if (base.startsWith('/')) {
+    return `${base.endsWith('/') ? base : base + '/'}${clean}`;
+  }
+  return `/${clean}`;
 };
 
 export const EducationCertificationsSection: React.FC = () => {
@@ -190,6 +200,14 @@ export const EducationCertificationsSection: React.FC = () => {
                       alt={cert.title}
                       className="w-full h-full object-contain group-hover/thumb:scale-105 transition-transform duration-500 rounded-lg shadow-md"
                       loading="lazy"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.triedFallback) {
+                          target.dataset.triedFallback = 'true';
+                          const clean = cert.certificateImage?.replace(/^(\.\/|\/)/, '') || '';
+                          target.src = `/amit-portfolio/${clean}`;
+                        }
+                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#060b19]/80 via-transparent to-transparent opacity-60 pointer-events-none" />
                     
@@ -203,7 +221,14 @@ export const EducationCertificationsSection: React.FC = () => {
 
                     {/* Issuer Logo Watermark Badge */}
                     <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5 px-2 py-1 rounded-lg bg-slate-900/90 border border-slate-800/80 backdrop-blur-md">
-                      <img src={resolveAssetUrl(cert.imageLogo)} alt={cert.issuer} className="w-4 h-4 object-contain" />
+                      <img
+                        src={resolveAssetUrl(cert.imageLogo)}
+                        alt={cert.issuer}
+                        className="w-4 h-4 object-contain"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLElement).style.display = 'none';
+                        }}
+                      />
                       <span className="text-[11px] font-medium text-slate-300">{cert.issuer}</span>
                     </div>
                   </div>
@@ -311,6 +336,9 @@ export const EducationCertificationsSection: React.FC = () => {
                   src={resolveAssetUrl(selectedCert.imageLogo)}
                   alt={selectedCert.issuer}
                   className="max-w-full max-h-full object-contain"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLElement).style.display = 'none';
+                  }}
                 />
               </div>
               <div>
@@ -334,6 +362,14 @@ export const EducationCertificationsSection: React.FC = () => {
                   src={resolveAssetUrl(selectedCert.certificateImage)}
                   alt={selectedCert.title}
                   className="w-full max-h-[480px] object-contain mx-auto rounded-lg"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.dataset.triedFallback) {
+                      target.dataset.triedFallback = 'true';
+                      const clean = selectedCert.certificateImage?.replace(/^(\.\/|\/)/, '') || '';
+                      target.src = `/amit-portfolio/${clean}`;
+                    }
+                  }}
                 />
                 <a
                   href={resolveAssetUrl(selectedCert.certificateImage)}
