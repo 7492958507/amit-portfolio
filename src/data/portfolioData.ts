@@ -343,15 +343,15 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
   },
   {
     id: "cert-internshala",
-    title: "Web & Software Development Certification",
-    issuer: "Internshala Trainings",
-    credentialId: "335472265/d1e7wepxygx",
-    issueDate: "2024",
+    title: "Artificial Intelligence (AI) Internship Selection",
+    issuer: "Internshala (She Can Foundation)",
+    credentialId: "51715kmvBqt",
+    issueDate: "13 Aug, 2026",
     verificationUrl: "https://internshala.com/student/certificate/335472265/d1e7wepxygx",
-    skills: ["Full Stack Web Development", "HTML/CSS", "JavaScript", "Frontend Engineering", "Practical Project Execution"],
+    skills: ["Artificial Intelligence (AI)", "Machine Learning", "Python", "Data Analysis", "Model Evaluation"],
     imageLogo: "https://internshala.com/favicon.ico",
-    certificateImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
-    description: "Hands-on project and skills certification awarded by Internshala upon successful completion of curriculum and practical development assessments."
+    certificateImage: "/certificates/internshala-ai-selection.png",
+    description: "Certificate of Selection awarded to Amit Kumar (MCKV Institute of Engineering) for securing an Artificial Intelligence (AI) internship at She Can Foundation through Internshala."
   },
   {
     id: "cert-hcl-rf-antenna",
