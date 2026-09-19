@@ -274,12 +274,12 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     title: "Flipkart GRiD 5.0 – Software Development Track",
     issuer: "Flipkart (via Unstop)",
     credentialId: "a5a52c0e-0afc-4771-b487-ff12278b73a1",
-    issueDate: "2023",
+    issueDate: "09 Aug, 2023",
     verificationUrl: "https://unstop.com/certificate-preview/a5a52c0e-0afc-4771-b487-ff12278b73a1",
     skills: ["E-Commerce Architecture", "Software Engineering", "System Design", "Distributed Systems", "Algorithms"],
     imageLogo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
-    certificateImage: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80",
-    description: "Participated in Level 1.1: E-Commerce & Tech Quiz for the flagship Flipkart GRiD 5.0 National Engineering Challenge."
+    certificateImage: "/certificates/unstop-flipkart-grid.png",
+    description: "Represented MCKV Institute of Engineering as Team BIHAR TIGER in Level 1.1: E-Commerce & Tech Quiz of Flipkart GRiD 5.0 - Software Development Track organised by Flipkart."
   },
   {
     id: "cert-udemy-react",
@@ -352,6 +352,30 @@ export const INITIAL_CERTIFICATES: Certificate[] = [
     imageLogo: "https://internshala.com/favicon.ico",
     certificateImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
     description: "Hands-on project and skills certification awarded by Internshala upon successful completion of curriculum and practical development assessments."
+  },
+  {
+    id: "cert-hcl-rf-antenna",
+    title: "Emerging Trends in RF and Antenna Technologies",
+    issuer: "HCL Technologies Ltd. & Adamas University (IETE)",
+    credentialId: "HCL-IETE-2024-RF",
+    issueDate: "20 Jun, 2024",
+    verificationUrl: "https://www.hcltech.com/",
+    skills: ["RF & Antenna Technologies", "Wireless Communication", "Telecommunications", "Hardware & Embedded Systems"],
+    imageLogo: "https://upload.wikimedia.org/wikipedia/commons/9/95/HCL_Technologies_logo.svg",
+    certificateImage: "/certificates/hcl-rf-antenna.png",
+    description: "Industrial Guest Lecture & training by Sri. Debojyoti Choudhuri (DGM, Head-Wireless, RF & Antenna COE, HCL Technologies Ltd.) appreciating active technical participation."
+  },
+  {
+    id: "cert-pvg-dsa-c",
+    title: "Data Structure using C Certification",
+    issuer: "PVG's College of Engineering, Nashik (SPPU)",
+    credentialId: "CPIZG8-CE019899",
+    issueDate: "27 Feb, 2022",
+    verificationUrl: "https://pvgcoenashik.org/",
+    skills: ["Data Structures", "C Programming", "Algorithms", "Memory Management", "Problem Solving"],
+    imageLogo: "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg",
+    certificateImage: "/certificates/pvg-dsa-c.png",
+    description: "Completed technical certification quiz on Data Structure using C organized by the Department of Electronics and Telecommunication Engineering with verified valid score."
   }
 ];
 
