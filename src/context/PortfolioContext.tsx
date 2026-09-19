@@ -68,14 +68,14 @@ const PortfolioContext = createContext<PortfolioContextType | undefined>(undefin
 
 export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Local storage keys
-  const STORAGE_KEY_INFO = 'amit_portfolio_info_v5';
-  const STORAGE_KEY_EXP = 'amit_portfolio_exp_v5';
-  const STORAGE_KEY_PROJ = 'amit_portfolio_proj_v5';
-  const STORAGE_KEY_AWARDS = 'amit_portfolio_awards_v5';
-  const STORAGE_KEY_CERTS = 'amit_portfolio_certs_v5';
-  const STORAGE_KEY_SKILLS = 'amit_portfolio_skills_v5';
-  const STORAGE_KEY_RESUME = 'amit_portfolio_uploaded_resume_v5';
-  const STORAGE_KEY_PIN = 'amit_portfolio_owner_pin_v5';
+  const STORAGE_KEY_INFO = 'amit_portfolio_info_v6';
+  const STORAGE_KEY_EXP = 'amit_portfolio_exp_v6';
+  const STORAGE_KEY_PROJ = 'amit_portfolio_proj_v6';
+  const STORAGE_KEY_AWARDS = 'amit_portfolio_awards_v6';
+  const STORAGE_KEY_CERTS = 'amit_portfolio_certs_v6';
+  const STORAGE_KEY_SKILLS = 'amit_portfolio_skills_v6';
+  const STORAGE_KEY_RESUME = 'amit_portfolio_uploaded_resume_v6';
+  const STORAGE_KEY_PIN = 'amit_portfolio_owner_pin_v6';
 
   const [personalInfo, setPersonalInfo] = useState<PersonalInfo>(() => {
     const saved = localStorage.getItem(STORAGE_KEY_INFO);

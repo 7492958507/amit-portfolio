@@ -47,6 +47,7 @@ export interface Certificate {
   verificationUrl: string;
   skills: string[];
   imageLogo: string;
+  certificateImage?: string;
   description: string;
 }
 
