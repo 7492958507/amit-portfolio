@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ExternalLink } from 'lucide-react';
 
 export const InteractiveBoyAvatar: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -253,24 +252,6 @@ export const InteractiveBoyAvatar: React.FC = () => {
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
           <span>Tracking cursor</span>
         </div>
-      </div>
-
-      {/* Amit Portfolio Button (Live Link) */}
-      <div className="mt-4">
-        <a
-          href="https://7492958507.github.io/amit-portfolio/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500/15 via-emerald-500/25 to-cyan-500/15 hover:from-emerald-500/25 hover:via-emerald-500/35 hover:to-cyan-500/25 border border-emerald-500/40 hover:border-emerald-400/60 text-xs sm:text-sm font-semibold text-emerald-300 hover:text-emerald-100 transition-all duration-300 shadow-lg shadow-emerald-950/40 active:scale-95"
-          title="Open Amit Portfolio Live"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
-          </span>
-          <span>Amit Portfolio</span>
-          <ExternalLink className="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-        </a>
       </div>
     </div>
   );
