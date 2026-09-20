@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { PortfolioProvider } from './context/PortfolioContext';
-import { ThreeBackground } from './components/ThreeBackground';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ExperienceSection } from './components/Experience';
@@ -25,8 +24,19 @@ export const AppContent: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-[#030712] text-slate-200 overflow-x-hidden selection:bg-emerald-500/30 selection:text-emerald-200">
-      {/* 3D Interactive WebGL Particle & Geometric Field */}
-      <ThreeBackground />
+      {/* Ambient Clean Background (No 3D WebGL overhead) */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-emerald-500/10 via-emerald-500/5 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-[30%] right-[-10%] w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-[20%] left-[-10%] w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-3xl" />
+        <div 
+          className="absolute inset-0 opacity-[0.03]" 
+          style={{ 
+            backgroundImage: 'radial-gradient(#10b981 1px, transparent 1px)', 
+            backgroundSize: '32px 32px' 
+          }} 
+        />
+      </div>
 
       {/* Main Navigation */}
       <Navbar />

@@ -4,8 +4,8 @@ export const INITIAL_PERSONAL_INFO: PersonalInfo = {
   name: "Amit Kumar",
   headlineRole: "Software Engineer",
   currentCompany: "Heloix Startup Minds",
-  location: "Patna, Bihar, India",
-  email: "krumar7890@gmail.com",
+  location: "Noida, India",
+  email: "kumaramit05201@gmail.com",
   phone: "+91-7492958507",
   linkedin: "https://www.linkedin.com/in/amit-kumar-b8ab6524a",
   github: "https://github.com/7492958507",
@@ -455,9 +455,9 @@ export const RAW_LATEX_RESUME = `%-------------------------
 \\begin{center}
     {\\Huge \\scshape Amit Kumar} \\\\[2pt]
     \\small
-    Patna, Bihar, India \\ $|$ \\
+    Noida, India \\ $|$ \\
     +91-7492958507 \\ $|$ \\
-    \\href{mailto:krumar7890@gmail.com}{krumar7890@gmail.com} \\ $|$ \\
+    \\href{mailto:kumaramit05201@gmail.com}{kumaramit05201@gmail.com} \\ $|$ \\
     \\href{https://www.linkedin.com/in/amit-kumar-b8ab6524a}{LinkedIn} \\ $|$ \\
     \\href{https://github.com/7492958507}{GitHub} \\ $|$ \\
     \\href{https://leetcode.com/u/theamit}{LeetCode}

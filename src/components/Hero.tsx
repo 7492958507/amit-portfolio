@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { usePortfolio } from '../context/PortfolioContext';
 import { InteractiveBoyAvatar } from './InteractiveBoyAvatar';
-import { QuantumGyroscope } from './QuantumGyroscope';
 import { Card3D } from './Card3D';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import {
@@ -9,14 +8,11 @@ import {
   ArrowRight,
   Code2,
   Layers,
-  Sparkles,
-  Mail,
-  Cpu
+  Mail
 } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   const { personalInfo, setIsResumeModalOpen } = usePortfolio();
-  const [activeVisual, setActiveVisual] = useState<'avatar' | 'gyro'>('avatar');
   const [slideKey, setSlideKey] = useState<number>(0);
   const [currentTagIndex, setCurrentTagIndex] = useState<number>(0);
   const [displayedText, setDisplayedText] = useState<string>('');
@@ -75,7 +71,7 @@ export const Hero: React.FC = () => {
               </span>
               <span className="text-emerald-500/50">•</span>
               <span className="text-slate-300">
-                {personalInfo.location.split(',')[0]}, India
+                {personalInfo.location}
               </span>
             </div>
 
@@ -191,39 +187,9 @@ export const Hero: React.FC = () => {
             <Card3D maxTilt={6} className="w-full max-w-sm sm:max-w-md">
               <div className="relative rounded-3xl bg-[#060b19]/90 border-2 border-emerald-500/30 p-6 shadow-[0_0_50px_-10px_rgba(16,185,129,0.25)] backdrop-blur-xl flex flex-col items-center">
                 
-                {/* Visual Mode Switcher (Figure Boy Avatar vs 3D Quantum Core) */}
-                <div className="flex items-center gap-1.5 p-1 rounded-full bg-slate-900/90 border border-slate-700/80 mb-6 text-xs font-medium">
-                  <button
-                    onClick={() => setActiveVisual('avatar')}
-                    className={`px-3.5 py-1.5 rounded-full transition-all flex items-center gap-1.5 ${
-                      activeVisual === 'avatar'
-                        ? 'bg-emerald-500 text-slate-950 font-bold shadow-sm'
-                        : 'text-slate-400 hover:text-slate-200'
-                    }`}
-                  >
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>Figure Boy</span>
-                  </button>
-                  <button
-                    onClick={() => setActiveVisual('gyro')}
-                    className={`px-3.5 py-1.5 rounded-full transition-all flex items-center gap-1.5 ${
-                      activeVisual === 'gyro'
-                        ? 'bg-emerald-500 text-slate-950 font-bold shadow-sm'
-                        : 'text-slate-400 hover:text-slate-200'
-                    }`}
-                  >
-                    <Cpu className="w-3.5 h-3.5" />
-                    <span>3D Quantum Core</span>
-                  </button>
-                </div>
-
-                {/* Visual Render Canvas */}
+                {/* Interactive Figure Boy Avatar (matching Screenshot 1) */}
                 <div className="w-full flex items-center justify-center min-h-[300px]">
-                  {activeVisual === 'avatar' ? (
-                    <InteractiveBoyAvatar />
-                  ) : (
-                    <QuantumGyroscope />
-                  )}
+                  <InteractiveBoyAvatar />
                 </div>
 
                 {/* Subtitle / status */}

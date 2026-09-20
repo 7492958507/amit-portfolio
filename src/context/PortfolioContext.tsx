@@ -68,7 +68,7 @@ const PortfolioContext = createContext<PortfolioContextType | undefined>(undefin
 
 export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Local storage keys
-  const STORAGE_KEY_INFO = 'amit_portfolio_info_v9';
+  const STORAGE_KEY_INFO = 'amit_portfolio_info_v11';
   const STORAGE_KEY_EXP = 'amit_portfolio_exp_v9';
   const STORAGE_KEY_PROJ = 'amit_portfolio_proj_v9';
   const STORAGE_KEY_AWARDS = 'amit_portfolio_awards_v9';

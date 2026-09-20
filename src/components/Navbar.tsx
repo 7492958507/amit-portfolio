@@ -61,7 +61,7 @@ export const Navbar: React.FC = () => {
               {personalInfo.name}
             </span>
             <span className="text-xs text-slate-400 hidden sm:inline-block">
-              {personalInfo.headlineRole} · {personalInfo.location.split(',')[0]}, India
+              {personalInfo.headlineRole} · {personalInfo.location}
             </span>
           </div>
         </a>
