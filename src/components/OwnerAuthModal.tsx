@@ -43,7 +43,7 @@ export const OwnerAuthModal: React.FC = () => {
         setIsEditModalOpen(true);
       }, 600);
     } else {
-      setErrorMessage('Incorrect Owner PIN. (Default PIN is 1234)');
+      setErrorMessage('Incorrect Owner PIN. Please try again.');
     }
   };
 
@@ -90,9 +90,6 @@ export const OwnerAuthModal: React.FC = () => {
         {/* Notice Info */}
         <div className="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-xs text-slate-300 leading-relaxed mb-6">
           Editing content, adding projects/skills/experiences, and uploading custom resume files is protected to ensure authenticity.
-          <div className="mt-1 text-emerald-400 font-mono">
-            Default Owner PIN: <strong>1234</strong>
-          </div>
         </div>
 
         {/* Status Messages */}
