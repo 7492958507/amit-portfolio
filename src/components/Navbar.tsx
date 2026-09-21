@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { usePortfolio } from '../context/PortfolioContext';
 import {
   FileText,
-  Lock,
-  Unlock,
   Menu,
   X
 } from 'lucide-react';
@@ -14,9 +12,6 @@ export const Navbar: React.FC = () => {
     theme,
     toggleTheme,
     setIsResumeModalOpen,
-    isOwner,
-    setIsAuthModalOpen,
-    setIsEditModalOpen,
   } = usePortfolio();
 
   const [scrolled, setScrolled] = useState(false);
@@ -99,27 +94,6 @@ export const Navbar: React.FC = () => {
             <FileText className="w-3.5 h-3.5 text-emerald-400" />
             <span>Resume</span>
           </button>
-
-          {/* Owner Protected Edit/Admin Button */}
-          {isOwner ? (
-            <button
-              onClick={() => setIsEditModalOpen(true)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/50 text-xs font-semibold text-amber-300 transition-all"
-              title="Open Portfolio Content Manager"
-            >
-              <Unlock className="w-3.5 h-3.5 text-amber-400" />
-              <span className="hidden sm:inline">Owner Edit</span>
-            </button>
-          ) : (
-            <button
-              onClick={() => setIsAuthModalOpen(true)}
-              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-xs font-medium text-slate-400 hover:text-slate-200 transition-all"
-              title="Restricted: Owner PIN Required"
-            >
-              <Lock className="w-3.5 h-3.5 text-slate-400" />
-              <span className="hidden sm:inline">Owner</span>
-            </button>
-          )}
 
           {/* Mobile menu toggle button */}
           <button

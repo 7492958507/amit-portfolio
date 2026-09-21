@@ -13,7 +13,6 @@ import { Footer } from './components/Footer';
 
 // Modals
 import { ATSResumeModal } from './components/ATSResumeModal';
-import { OwnerAuthModal } from './components/OwnerAuthModal';
 import { EditPortfolioModal } from './components/EditPortfolioModal';
 import { ResumeUploadModal } from './components/ResumeUploadModal';
 
@@ -58,7 +57,6 @@ export const AppContent: React.FC = () => {
 
       {/* Interactive Global Modals */}
       <ATSResumeModal />
-      <OwnerAuthModal />
       <EditPortfolioModal />
       <ResumeUploadModal />
     </div>

@@ -22,7 +22,6 @@ export const ATSResumeModal: React.FC = () => {
     education,
     rawLatexResume,
     uploadedResume,
-    requireOwnerAuth,
     setIsUploadModalOpen,
   } = usePortfolio();
 
@@ -52,10 +51,8 @@ export const ATSResumeModal: React.FC = () => {
   };
 
   const handleTriggerUpload = () => {
-    requireOwnerAuth(() => {
-      setIsResumeModalOpen(false);
-      setIsUploadModalOpen(true);
-    });
+    setIsResumeModalOpen(false);
+    setIsUploadModalOpen(true);
   };
 
   return (
@@ -133,7 +130,7 @@ export const ATSResumeModal: React.FC = () => {
           <button
             onClick={handleTriggerUpload}
             className="hidden md:flex items-center gap-1 text-slate-400 hover:text-emerald-400 text-xs font-mono"
-            title="Upload your own custom resume file (Owner PIN protected)"
+            title="Upload your own custom resume file"
           >
             <span>Upload New Resume</span>
           </button>
