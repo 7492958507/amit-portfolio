@@ -22,6 +22,7 @@ export const ATSResumeModal: React.FC = () => {
     education,
     rawLatexResume,
     uploadedResume,
+    requireOwnerAuth,
     setIsUploadModalOpen,
   } = usePortfolio();
 
@@ -51,8 +52,10 @@ export const ATSResumeModal: React.FC = () => {
   };
 
   const handleTriggerUpload = () => {
-    setIsResumeModalOpen(false);
-    setIsUploadModalOpen(true);
+    requireOwnerAuth(() => {
+      setIsResumeModalOpen(false);
+      setIsUploadModalOpen(true);
+    });
   };
 
   return (
